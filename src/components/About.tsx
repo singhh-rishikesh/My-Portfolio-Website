@@ -1,59 +1,102 @@
+import { Code2, Database, Globe, Palette } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
+  const highlights = [
+    {
+      icon: Code2,
+      title: "Full-Stack Development",
+      description: "Proficient in both frontend and backend technologies with modern frameworks",
+    },
+    {
+      icon: Database,
+      title: "Database Design",
+      description: "Experience with SQL databases and data modeling for efficient applications",
+    },
+    {
+      icon: Globe,
+      title: "Web Technologies",
+      description: "Modern web development using HTML5, CSS3, JavaScript, and responsive design",
+    },
+    {
+      icon: Palette,
+      title: "UI/UX Focused",
+      description: "Creating intuitive and visually appealing user interfaces and experiences",
+    },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-            About Me
+    <section id="about" className="py-20 bg-gradient-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            About <span className="text-orange-primary">Me</span>
           </h2>
-          
-          <Card className="bg-card border-border">
-            <CardContent className="p-8">
-              <div className="space-y-6 text-card-foreground">
-                <p className="text-lg leading-relaxed">
-                  I'm a passionate B.Tech final-year student with a strong foundation in software development 
-                  and a keen interest in modern web technologies. My journey in programming started with a 
-                  curiosity about how digital solutions can solve real-world problems.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  Throughout my academic journey, I've developed expertise in multiple programming languages 
-                  including Python, Java, and JavaScript. I'm particularly drawn to full-stack development 
-                  and enjoy creating seamless user experiences backed by robust backend systems.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  I believe in continuous learning and staying updated with the latest industry trends. 
-                  My goal is to contribute to innovative projects that make a positive impact while growing 
-                  professionally in a collaborative environment.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-primary">What I Bring</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li>• Strong problem-solving skills</li>
-                      <li>• Team collaboration experience</li>
-                      <li>• Adaptability to new technologies</li>
-                      <li>• Attention to detail</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-primary">Interests</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li>• Web Development</li>
-                      <li>• Data Analysis</li>
-                      <li>• Open Source Contribution</li>
-                      <li>• Creative Writing</li>
-                    </ul>
-                  </div>
-                </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Passionate about technology and innovation, I'm dedicated to creating 
+            impactful software solutions that make a difference.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="prose prose-invert max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                As a final-year B.Tech student specializing in software development, 
+                I bring a fresh perspective combined with solid technical foundations. 
+                My journey in technology has been driven by curiosity and a desire to 
+                solve real-world problems through code.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I have experience working with modern technologies including Python, 
+                Java, JavaScript, and various databases. My approach focuses on writing 
+                clean, maintainable code while staying updated with the latest industry trends.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Beyond coding, I enjoy exploring creative writing and continuously 
+                learning new technologies. I'm actively seeking opportunities to contribute 
+                to meaningful projects and grow as a developer.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                <span className="text-muted-foreground">Final Year B.Tech Student</span>
               </div>
-            </CardContent>
-          </Card>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                <span className="text-muted-foreground">Full-Stack Developer</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                <span className="text-muted-foreground">Problem Solver</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {highlights.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <Card key={index} className="bg-card border-border hover:border-orange-primary/50 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-orange-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-primary/20 transition-colors duration-300">
+                      <Icon className="h-6 w-6 text-orange-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

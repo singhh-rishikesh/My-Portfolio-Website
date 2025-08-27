@@ -1,134 +1,88 @@
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Download, Github, Linkedin, Mail, Upload } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { useRef, useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import avinashPhoto from "@/assets/avinash-photo.png";
+import heroImage from "@/assets/avinash-portrait.jpg";
 
 const Hero = () => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [uploadedResume, setUploadedResume] = useState<string | null>(null);
-  const { toast } = useToast();
-
-  const handleResumeUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (file.type === 'application/pdf' || file.name.endsWith('.pdf')) {
-        const resumeUrl = URL.createObjectURL(file);
-        setUploadedResume(resumeUrl);
-        toast({
-          title: "Resume uploaded successfully!",
-          description: `${file.name} is ready for download.`,
-        });
-      } else {
-        toast({
-          title: "Invalid file type",
-          description: "Please upload a PDF file.",
-          variant: "destructive",
-        });
-      }
-    }
-  };
-
-  const handleDownloadResume = () => {
-    if (uploadedResume) {
-      const link = document.createElement('a');
-      link.href = uploadedResume;
-      link.download = 'Avinash_Kumar_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      toast({
-        title: "No resume available",
-        description: "Please upload your resume first.",
-        variant: "destructive",
-      });
-    }
-  };
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/avinashkumar", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/avinashkumar", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:avinash.kumar@email.com", label: "Email" },
+  ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 hero-gradient">
-      <div className="container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Avatar */}
-          <div className="mb-8 flex justify-center">
-            <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-primary animate-float">
-              <AvatarImage src={avinashPhoto} alt="Avinash Kumar" />
-              <AvatarFallback className="text-2xl font-bold">AK</AvatarFallback>
-            </Avatar>
-          </div>
-
-          {/* Name and Title */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
-            Avinash Kumar
-          </h1>
-          <p className="text-xl md:text-2xl text-primary mb-6 font-semibold">
-            B.Tech Final Year Developer
-          </p>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Passionate full-stack developer specializing in modern web technologies. 
-            Ready to contribute to innovative projects and grow with a dynamic team.
-          </p>
-
-          {/* Resume Upload/Download Section */}
-          <div className="mb-8 space-y-4">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Input
-                type="file"
-                accept=".pdf"
-                onChange={handleResumeUpload}
-                ref={fileInputRef}
-                className="hidden"
-              />
-              <Button
-                onClick={() => fileInputRef.current?.click()}
-                variant="outline"
-                className="w-full sm:w-auto"
-              >
-                <Upload className="mr-2 h-4 w-4" />
-                Upload Resume
-              </Button>
-              <Button
-                onClick={handleDownloadResume}
-                className="w-full sm:w-auto"
-                disabled={!uploadedResume}
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
+    <section id="home" className="min-h-screen flex items-center pt-16 bg-gradient-hero">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Profile Image */}
+          <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+            <div className="relative">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow animate-float">
+                <img
+                  src={heroImage}
+                  alt="Avinash Kumar - Developer Portfolio"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-accent rounded-full opacity-20 animate-pulse-glow"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-orange-glow/10 rounded-full opacity-30"></div>
             </div>
-            {uploadedResume && (
-              <p className="text-sm text-muted-foreground">
-                Resume uploaded and ready for download
+          </div>
+
+          {/* Content */}
+          <div className="order-1 lg:order-2 text-center lg:text-left animate-fade-in">
+            <div className="mb-6">
+              <h2 className="text-lg text-orange-primary font-medium mb-2 tracking-wide">
+                — I'M AVINASH KUMAR.
+              </h2>
+              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
+                SOFTWARE
+                <br />
+                <span className="bg-gradient-accent bg-clip-text text-transparent">
+                  DEVELOPER
+                </span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                I'm a B.Tech final-year developer passionate about building 
+                excellent software that improves the lives of those around me. 
+                I specialize in creating exceptional digital experiences with 
+                modern technologies.
               </p>
-            )}
-          </div>
+            </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-8">
-            <Button variant="ghost" size="lg" asChild>
-              <a href="https://github.com/avinashkumar" target="_blank" rel="noopener noreferrer">
-                <Github className="h-6 w-6" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="https://linkedin.com/in/avinashkumar" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-6 w-6" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="mailto:avinash@example.com">
-                <Mail className="h-6 w-6" />
-              </a>
-            </Button>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-8">
+              <Button
+                size="lg"
+                className="bg-gradient-accent hover:shadow-glow transition-all duration-300 group"
+              >
+                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                DOWNLOAD RESUME
+              </Button>
+              
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:border-orange-primary hover:shadow-soft transition-all duration-300 group"
+                      aria-label={social.label}
+                    >
+                      <Icon className="h-5 w-5 text-muted-foreground group-hover:text-orange-primary transition-colors duration-300" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
 
-          {/* CTA Button */}
-          <Button size="lg" className="animate-pulse" asChild>
-            <a href="#contact">Let's Connect</a>
-          </Button>
+            {/* Scroll Indicator */}
+            <div className="hidden lg:flex items-center text-muted-foreground">
+              <div className="w-px h-16 bg-gradient-to-b from-orange-primary to-transparent mr-4"></div>
+              <span className="text-sm tracking-widest rotate-90 origin-left">SCROLL DOWN</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

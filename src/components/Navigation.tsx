@@ -1,65 +1,72 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Education", href: "#education" },
-    { label: "Achievements", href: "#achievements" },
-    { label: "Writing", href: "#writing" },
-    { label: "Contact", href: "#contact" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Education", href: "#education" },
+    { name: "Achievements", href: "#achievements" },
+    { name: "Writing", href: "#writing" },
+    { name: "Contact", href: "#contact" },
   ];
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-primary">
+    <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-md border-b border-border z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
             Avinash Kumar
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
               >
-                {item.label}
-              </a>
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-accent group-hover:w-full transition-all duration-300"></span>
+              </button>
             ))}
           </div>
 
-          {/* Mobile Navigation Toggle */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-card rounded-lg mt-2 p-4 shadow-card animate-slide-up">
+            <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 px-4 py-2"
-                  onClick={() => setIsOpen(false)}
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-left text-muted-foreground hover:text-foreground transition-colors duration-300 py-2"
                 >
-                  {item.label}
-                </a>
+                  {item.name}
+                </button>
               ))}
             </div>
           </div>
