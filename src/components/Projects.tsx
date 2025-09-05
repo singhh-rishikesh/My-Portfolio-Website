@@ -6,42 +6,35 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce application with user authentication, product catalog, shopping cart, and payment integration. Built with modern web technologies and responsive design principles.",
-      techStack: ["JavaScript", "React", "Node.js", "PostgreSQL", "CSS3"],
-      githubLink: "https://github.com/avinashkumar/ecommerce-platform",
-      liveLink: "https://ecommerce-demo.example.com",
+      title: "Universal Trading Platform",
+      description: "A modern trading platform built with React, TypeScript, Vite, and Tailwind CSS. The platform offers a responsive, user-friendly interface for traders, featuring real-time data updates and advanced trading tools. Developed with focus on performance, scalability, and clean UI design.",
+      techStack: ["TypeScript", "React", "Node.js", "PostgreSQL", "CSS3"],
+      githubLink: "https://github.com/singhh-rishikesh/-Universal-trading-platform",
       category: "Full-Stack"
     },
     {
-      title: "Task Management System",
-      description: "A comprehensive task management application with real-time updates, team collaboration features, and progress tracking. Includes drag-and-drop functionality and deadline notifications.",
-      techStack: ["Python", "Django", "PostgreSQL", "HTML5", "CSS3"],
-      githubLink: "https://github.com/avinashkumar/task-manager",
-      liveLink: "https://taskmanager-demo.example.com",
+      title: "HastMitra",
+      description: "Empowering artisans by bridging the gap between traditional craftsmanship and modern markets. Sell & buy handmade products across India!",
+      techStack: ["TypeScript", "PostgreSQL", "HTML5", "CSS3", "Other"],
+      githubLink: "https://github.com/singhh-rishikesh/HastMitra",
+      liveLink: "https://github.com/singhh-rishikesh/HastMitra",
       category: "Web Application"
-    },
-    {
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for data visualization and analytics using Power BI and Python. Features dynamic charts, filters, and real-time data processing capabilities.",
-      techStack: ["Python", "Power BI", "PostgreSQL", "JavaScript"],
-      githubLink: "https://github.com/avinashkumar/analytics-dashboard",
-      category: "Data Analysis"
     },
     {
       title: "Portfolio Website",
       description: "A responsive personal portfolio website showcasing projects, skills, and achievements. Built with modern design principles and optimized for performance and SEO.",
       techStack: ["React", "TypeScript", "HTML5", "CSS3", "Responsive Design"],
-      githubLink: "https://github.com/avinashkumar/portfolio",
-      liveLink: "https://avinashkumar.dev",
+      githubLink: "https://github.com/singhh-rishikesh/My-Portfolio-Website",
+      liveLink: "https://github.com/singhh-rishikesh/My-Portfolio-Website",
       category: "Frontend"
     },
     {
-      title: "API Integration Project",
-      description: "A RESTful API integration project demonstrating CRUD operations, authentication, and data validation. Includes comprehensive documentation and testing suite.",
-      techStack: ["Java", "Spring Boot", "PostgreSQL", "Git"],
-      githubLink: "https://github.com/avinashkumar/api-integration",
-      category: "Backend"
+      title: "Behavioral Monitoring System",
+      description: "A Python-based behavioral monitoring system designed to analyze and track human behavior patterns. Integrates web technologies (HTML, CSS) for user interaction and visualization. This project demonstrates expertise in data analysis, real-time monitoring, and front-end development.",
+      techStack: ["Python", "HTML", "CSS", "OpenCV"],
+      githubLink: "https://github.com/singhh-rishikesh/Behavior-Monitoring-System",
+      liveLink: "https://github.com/singhh-rishikesh/Behavior-Monitoring-System",
+      category: "Frontend"
     }
   ];
 
@@ -144,7 +137,7 @@ const Projects = () => {
             className="hover:border-orange-primary hover:text-orange-primary transition-all duration-300"
           >
             <a
-              href="https://github.com/avinashkumar"
+              href="https://github.com/singhh-rishikesh"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

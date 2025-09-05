@@ -5,58 +5,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const Achievements = () => {
   const achievements = [
     {
-      icon: Trophy,
-      title: "Dean's List Recognition",
-      description: "Recognized for academic excellence with consistent high performance throughout the semester",
-      date: "2023",
-      category: "Academic"
-    },
-    {
       icon: Award,
-      title: "Best Project Award",
-      description: "Received recognition for innovative e-commerce platform project in Software Engineering course",
-      date: "2023",
+      title: "Best Project Presentation Award",
+      description: "Received recognition for innovative Assistive Technology System project Showcased innovative ideas and problem-solving through a research-based IBM poster.",
+      date: "2025",
       category: "Project"
     },
     {
-      icon: Star,
-      title: "Infosys Springboard Power BI Certification",
-      description: "Successfully completed comprehensive training in business intelligence and data visualization",
-      date: "2023",
-      category: "Certification"
+      icon: Users,
+      title: "Team Project Lead",
+      description: "Led a team for many projects development and deployment during coursework",
+      date: "2022-Present",
+      category: "Leadership"
     },
     {
       icon: Users,
-      title: "Technical Society Member",
-      description: "Active member of the Computer Science Society, organizing workshops and technical events",
-      date: "2022-Present",
-      category: "Leadership"
+      title: "Academor Internship Experience",
+      description: "Completed an Artificial Intelligence internship using Python, gaining practical industry experience and working on live projects",
+      date: "2024",
+      category: "Experience"
     }
   ];
 
   const certifications = [
     {
-      name: "Infosys Springboard Power BI",
-      issuer: "Infosys",
-      year: "2023",
-      skills: ["Data Visualization", "Business Intelligence", "Analytics"]
-    },
-    {
-      name: "Complete Web Development Bootcamp",
-      issuer: "Udemy",
-      year: "2023",
-      skills: ["Full-Stack Development", "JavaScript", "Node.js", "React"]
-    },
-    {
-      name: "Python Programming Specialization",
-      issuer: "Coursera",
-      year: "2022",
-      skills: ["Python", "Data Analysis", "Object-Oriented Programming"]
-    },
-    {
       name: "Git & GitHub Fundamentals",
       issuer: "GitHub",
-      year: "2022",
+      year: "2023",
       skills: ["Version Control", "Collaboration", "DevOps"]
     }
   ];

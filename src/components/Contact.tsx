@@ -21,19 +21,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "avinash.kumar@email.com",
-      href: "mailto:avinash.kumar@email.com"
+      value: "rishikesh.sourabh@gmail.com",
+      href: "mailto:rishikesh.sourabh@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 9876543210",
-      href: "tel:+919876543210"
+      value: "+91 8709631861",
+      href: "tel:+918709631861"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "New Delhi, India",
+      value: "Patna, Bihar, India",
       href: "#"
     }
   ];
@@ -42,20 +42,20 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com/avinashkumar",
-      username: "@avinashkumar"
+      href: "https://github.com/singhh-rishikesh",
+      username: "@singhh-rishikesh"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "https://linkedin.com/in/avinashkumar",
-      username: "Avinash Kumar"
+      href: "https://www.linkedin.com/in/rishikesh-sourabh87",
+      username: "Rishikesh Sourabh"
     },
     {
       icon: Mail,
       name: "Email",
-      href: "mailto:avinash.kumar@email.com",
-      username: "avinash.kumar@email.com"
+      href: "mailto:rishikesh.sourabh@gmail.com",
+      username: "rishikesh.sourabh@gmail.com"
     }
   ];
 

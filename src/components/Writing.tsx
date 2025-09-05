@@ -16,21 +16,21 @@ const Writing = () => {
       excerpt: "Reflections on the journey of learning programming languages and software development concepts during my B.Tech program.",
       category: "Education",
       readTime: "2 min read",
-      date: "Nov 2023"
+      date: "Nov 2022"
     },
     {
       title: "Building My First Full-Stack App",
       excerpt: "A detailed walkthrough of creating my first complete web application, from conception to deployment, including challenges faced.",
       category: "Development",
       readTime: "4 min read",
-      date: "Oct 2023"
+      date: "Oct 2024"
     },
     {
       title: "Data Visualization with Power BI",
       excerpt: "Insights gained from working with Power BI for data analysis and visualization, and how it enhances decision-making processes.",
       category: "Data Science",
       readTime: "3 min read",
-      date: "Sep 2023"
+      date: "Aug 2025"
     }
   ];
 

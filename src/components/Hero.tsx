@@ -1,12 +1,12 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/avinash-portrait.jpg";
+import heroImage from "@/assets/Rishikesh_photo.png";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/avinashkumar", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/avinashkumar", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:avinash.kumar@email.com", label: "Email" },
+    { icon: Github, href: "https://github.com/singhh-rishikesh", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/rishikesh-sourabh87", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:rishikesh.sourabh@gmail.com", label: "Email" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow animate-float">
                 <img
                   src={heroImage}
-                  alt="Avinash Kumar - Developer Portfolio"
+                  alt="Rishikesh Sourabh - Developer Portfolio"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="order-1 lg:order-2 text-center lg:text-left animate-fade-in">
             <div className="mb-6">
               <h2 className="text-lg text-orange-primary font-medium mb-2 tracking-wide">
-                — I'M AVINASH KUMAR.
+                — I'M RISHIKESH SOURABH.
               </h2>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
                 SOFTWARE

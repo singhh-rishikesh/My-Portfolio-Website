@@ -1,14 +1,16 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { title } from "process";
+import { Description } from "@radix-ui/react-toast";
 
 const Education = () => {
   const education = [
     {
       degree: "Bachelor of Technology (B.Tech)",
       field: "Computer Science Engineering",
-      institution: "Indian Institute of Technology (Example)",
-      location: "New Delhi, India",
-      period: "2021 - 2024",
+      institution: "Kalasalingam Academy of Research and Education",
+      location: "Tamil Nadu, India",
+      period: "2022 - 2026",
       status: "Final Year",
       description: "Comprehensive program covering software engineering, data structures, algorithms, database systems, and modern programming languages. Focused on practical application of computer science principles.",
       coursework: [
@@ -24,22 +26,46 @@ const Education = () => {
 
   const certifications = [
     {
-      title: "Infosys Springboard Power BI Certification",
+      title: "Introduction to Artificial Intelligence",
       issuer: "Infosys",
-      date: "2023",
-      description: "Comprehensive training in business intelligence and data visualization using Microsoft Power BI"
+      date: "2024",
+      description: "Gained an understanding of AI fundamentals, including machine learning concepts, natural language processing, and computer vision. Explored how AI can be applied in real-world problem solving, automation, and decision-making. The course also emphasized the ethical aspects of AI, its future potential, and the impact on industries and society."
     },
     {
-      title: "Complete Web Development Bootcamp",
+      title: "Scrum in Practice",
+      issuer: "Infosys",
+      date: "2024",
+      description: "Gained strong knowledge of Agile methodologies and the Scrum framework, including roles (Product Owner, Scrum Master, Development Team), artifacts (Product Backlog, Sprint Backlog, Increment), and ceremonies (Sprint Planning, Daily Stand-ups, Reviews, Retrospectives). Also learned practical skills in team collaboration, backlog management, sprint execution, and delivering value through iterative development, with a focus on transparency, adaptability, and productivity."
+    },
+    {
+      title: "Software Engineering and Agile Software Development",
+      issuer: "Infosys",
+      date: "2024",
+      description: "Learned the core principles of software engineering including requirements analysis, design, development, testing, and maintenance. Gained practical understanding of Agile methodologies, emphasizing iterative development, continuous integration, and customer collaboration. The course also highlighted the software development lifecycle (SDLC), best coding practices, and how Agile improves flexibility, quality, and faster delivery in modern projects."
+    },
+    {
+      title: "PHP and MySQL for Web Application and Web Development",
       issuer: "Udemy",
-      date: "2023",
-      description: "Full-stack web development course covering HTML, CSS, JavaScript, Node.js, and database integration"
+      date: "2025",
+      description: "Full-stack web development course focused on building dynamic web applications using PHP and MySQL, including database design, server-side scripting, and integration with front-end technologies."
     },
     {
-      title: "Python Programming Specialization",
-      issuer: "Coursera",
-      date: "2022",
-      description: "Advanced Python programming concepts, data analysis, and application development"
+      title: "Data Science Full Course",
+      issuer: "Infosys",
+      date: "2025",
+      description: "Developed a foundation in data collection, cleaning, and preprocessing techniques. Gained hands-on knowledge of data visualization for identifying trends and patterns, along with basic statistical methods to support data-driven decision-making. The course also introduced the use of analytical tools and real-world applications of data science in solving business problems."
+    },
+    {
+      title: "Leading in the Age of Generative AI",
+      issuer: "Infosys",
+      date: "2024",
+      description: "This certification focused on understanding Generative AI fundamentals and its transformative role in industries. It covered topics like large language models (LLMs), prompt engineering, ethical considerations, and responsible AI usage. The course also emphasized business applications of GenAI such as content generation, automation, customer experience, and decision support. Additionally, it provided leadership perspectives, helping in understanding how to drive innovation, manage AI adoption in organizations, and balance technology with human creativity."
+    },
+    {
+      title: "Prompt Engineering Application",
+      issuer: "SimpliLearn",
+      date: "2025",
+      description: "A course on crafting effective AI prompts to optimize interactions with generative models. Covers prompt design, advanced prompting techniques, Large Language Models (LLMs), and hands-on experience with tools like ChatGPT, LangChain, and OpenAI Codex."
     }
   ];
 
@@ -156,7 +182,7 @@ const Education = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-orange-primary">3.8+</div>
+              <div className="text-2xl font-bold text-orange-primary">8.3+</div>
               <div className="text-sm text-muted-foreground">Cumulative GPA</div>
             </div>
             <div className="space-y-2">

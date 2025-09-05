@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/avinashkumar", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/avinashkumar", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:avinash.kumar@email.com", label: "Email" },
+    { icon: Github, href: "https://github.com/singhh-rishikesh", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/rishikesh-sourabh87/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:rishikesh.sourabh@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Brand & Description */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-              Avinash Kumar
+              Rishikesh Sourabh
             </h3>
             <p className="text-muted-foreground leading-relaxed">
               B.Tech final-year developer passionate about creating innovative software solutions. 
@@ -72,9 +72,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>📧 avinash.kumar@email.com</p>
-              <p>📱 +91 9876543210</p>
-              <p>📍 New Delhi, India</p>
+              <p>📧 rishikesh.sourabh@gmail.com</p>
+              <p>📱 +91 8709631861</p>
+              <p>📍 Patna, Bihar, India</p>
             </div>
             <p className="text-sm text-muted-foreground">
               Open to internship and job opportunities
@@ -86,12 +86,9 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Avinash Kumar. All rights reserved.
+              © 2025 Rishikesh Sourabh. All rights reserved.
             </p>
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-orange-primary fill-current" />
-              <span>using React & TypeScript</span>
             </div>
           </div>
         </div>

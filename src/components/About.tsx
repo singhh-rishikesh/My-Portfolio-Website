@@ -23,6 +23,11 @@ const About = () => {
       title: "UI/UX Focused",
       description: "Creating intuitive and visually appealing user interfaces and experiences",
     },
+    {
+      icon: Palette,
+      title: "Manual Tester",
+      description: "We check the software manually by executing test cases, exploring the application, and reporting bugs.",
+    },
   ];
 
   return (
@@ -73,6 +78,10 @@ const About = () => {
               <div className="flex items-center gap-2 text-sm">
                 <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
                 <span className="text-muted-foreground">Problem Solver</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                <span className="text-muted-foreground">Manual Tester</span>
               </div>
             </div>
           </div>

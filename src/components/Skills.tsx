@@ -25,15 +25,14 @@ const Skills = () => {
       skills: [
         { name: "PostgreSQL", level: 75, color: "bg-indigo-500" },
         { name: "Git", level: 80, color: "bg-orange-600" },
-        { name: "Power BI", level: 70, color: "bg-yellow-600" },
       ],
     },
   ];
 
   const techStack = [
     "Python", "Java", "JavaScript", "HTML5", "CSS3", "React", 
-    "Node.js", "PostgreSQL", "Git", "Power BI", "REST APIs", 
-    "Responsive Design", "Agile", "Problem Solving"
+    "Node.js", "PostgreSQL", "Git", "REST APIs", 
+    "Responsive Design", "Agile", "Problem Solving", "Manual Tester","Gira"
   ];
 
   return (
@@ -104,7 +103,7 @@ const Skills = () => {
             <div className="text-sm text-muted-foreground">Technologies Mastered</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-orange-primary">2024</div>
+            <div className="text-3xl font-bold text-orange-primary">2026</div>
             <div className="text-sm text-muted-foreground">Expected Graduation</div>
           </div>
         </div>
